@@ -4,6 +4,7 @@
 
 *{
   box-sizing: border-box;
+  -webkit-user-select: inherit;
 }
 
 /* Basic switch dimensions */
@@ -15,6 +16,7 @@
   padding: 3px;
   overflow: hidden;
   cursor: pointer;
+  -webkit-user-select: none;
 }
 
 /* @group Toggling bit */
@@ -23,7 +25,6 @@
   width: 24px;
   height: 24px;
   border-radius: 3px;
-
   position: relative;
 
   background-color: #FFF;
@@ -32,7 +33,7 @@
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.06) 100%);
 
-  -webkit-transition-property: -webkit-translate;
+  -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 240ms;
   -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 
@@ -58,6 +59,8 @@
   top: 0;
   bottom: 0;
   right: 0;
+  height: 100%;
+  width: 100%;
 
   -webkit-appearance: none;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%) #eaeaea;
@@ -96,6 +99,7 @@
   letter-spacing: 0px;
   text-shadow: 0 1px 1px rgb(255, 255, 255);
   color: #AAA;
+  -webkit-user-select: none;
 }
 
 .checkbox-switch div:before{
@@ -112,12 +116,14 @@
 
 /* @group Click animation */
 
-.checkbox-switch input:active + div{
+.checkbox-switch input:active + div,
+.checkbox-switch div:active{
   -webkit-transform: translate3d(3px,0,0);
   -webkit-transition-duration: 120ms;
 }
 
-.checkbox-switch input:checked:active + div{
+.checkbox-switch input:checked:active + div,
+.checkbox-switch input:checked + div:active{
   -webkit-transform: translate3d(27px,0,0);
 }
 
