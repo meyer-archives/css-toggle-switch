@@ -53,6 +53,8 @@
 .checkbox-switch input{
   margin: 0;
   padding: 0;
+  border:  none;
+  outline: none;
 
   position: absolute;
   left: 0;
