@@ -50,11 +50,23 @@
 
 /* @group Track */
 
+/* KILL IT WITH FIRE */
+.checkbox-switch,
+.checkbox-switch input,
+.checkbox-switch:active,
+.checkbox-switch input:active,
+{
+  -webkit-appearance: none;
+  -webkit-touch-callout:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
 .checkbox-switch input{
   margin: 0;
   padding: 0;
   border:  none;
   outline: none;
+  -webkit-appearance: none;
 
   position: absolute;
   left: 0;
@@ -64,7 +76,6 @@
   height: 100%;
   width: 100%;
 
-  -webkit-appearance: none;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%) #eaeaea;
   -webkit-border-radius: 6px;
   -webkit-transition: background-color 240ms ease-in-out;
@@ -120,8 +131,10 @@
 
 .checkbox-switch input:active + div,
 .checkbox-switch div:active{
+  -webkit-transition-delay: 100ms;
   -webkit-transform: translate3d(3px,0,0);
-  -webkit-transition-duration: 120ms;
+  /* TODO: get this right */
+  /*-webkit-transition-duration: 90ms;*/
 }
 
 .checkbox-switch input:checked:active + div,
@@ -138,11 +151,11 @@
 body,html{
   background: #EEE;
   margin: 0;
+  -webkit-text-size-adjust: 100%;
 }
 
 .checkbox-container{
   background: #FFF;
-  padding: 20px 0 0 20px;
   border-radius: 6px;
 
   /* Here's a gross center-in-page hack */
@@ -154,9 +167,20 @@ body,html{
   left: 0;
   right: 0;
   bottom: 0;
+
   box-shadow:
     0 1px 1px rgba(0, 0, 0, 0.1),
     0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+.checkbox-switch{
+  /* More of that voodoo magic */
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /* @end */
