@@ -56,7 +56,7 @@
 .checkbox-switch,
 .checkbox-switch input,
 .checkbox-switch:active,
-.checkbox-switch input:active,
+.checkbox-switch input:active
 {
   -webkit-appearance: none;
   -webkit-touch-callout:none;
