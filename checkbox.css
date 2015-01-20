@@ -10,10 +10,10 @@
 /* Basic switch dimensions */
 .checkbox-switch{
   display: block;
-  height: 30px;
+  height: 24px;
   width: 60px;
   position: relative;
-  padding: 3px;
+  padding: 1px;
   overflow: hidden;
   cursor: pointer;
   -webkit-user-select: none;
@@ -23,8 +23,8 @@
 
 .checkbox-switch div{
   width: 24px;
-  height: 24px;
-  border-radius: 3px;
+  height: 22px;
+  border-radius: 5px;
   position: relative;
 
   background-color: #FFF;
@@ -43,7 +43,7 @@
 }
 
 .checkbox-switch input:checked + div{
-  -webkit-transform: translate3d(30px,0,0);
+  -webkit-transform: translate3d(34px,0,0);
 }
 
 /* @end */
@@ -84,15 +84,15 @@
 .checkbox-switch div:after{
   content: "off";
   width: 26px;
-  height: 30px;
+  height: 24px;
   position: absolute;
-  top: -3px;
+  top: -1px;
   left: 100%;
 
   font-weight: 700;
-  font-size: 9px;
-  line-height: 30px;
-  font-family:"Gotham SSm", "Gotham", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-size: 10px;
+  line-height: 24px;
+  font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 
   text-transform: uppercase;
   padding: 0 6px;
@@ -124,7 +124,7 @@
 
 .checkbox-switch input:checked:active + div,
 .checkbox-switch input:checked + div:active{
-  -webkit-transform: translate3d(27px,0,0);
+  -webkit-transform: translate3d(31px,0,0);
 }
 
 /* @end */
@@ -145,7 +145,7 @@ body,html{
 
   /* Here's a gross center-in-page hack */
   width: 100px;
-  height: 70px;
+  height: 64px;
   margin: auto;
   position: absolute;
   top: 0;
