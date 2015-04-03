@@ -115,6 +115,7 @@
   text-shadow: 0 1px 1px rgb(255, 255, 255);
   color: #AAA;
   -webkit-user-select: none;
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .checkbox-switch div:before{
